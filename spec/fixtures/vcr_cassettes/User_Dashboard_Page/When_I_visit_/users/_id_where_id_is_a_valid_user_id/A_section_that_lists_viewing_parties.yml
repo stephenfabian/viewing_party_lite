@@ -25,37 +25,31 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
+      - Mon, 24 Oct 2022 17:57:26 GMT
       Server:
       - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
       X-Cascade:
       - pass
       Vary:
-      - Accept-Encoding
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 0d4ebcaa87ba94709def0eaac9371e5a.cloudfront.net (CloudFront)
+      - 1.1 c29390732f5bc4b2c7832623ae6e492e.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - SEA73-P1
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - xAX7q-3QIqk7_lAt39MDMAodx_h8MrKn8FhTPBJpQYp-RIDGlAJ2Tg==
+      - 8_3dWGKGAASWW6tQpPX8zEe9trPYnWfOFceaw2jNFGGsEkt8vaAd7w==
       Age:
       - '1'
     body:
       encoding: ASCII-8BIT
       string: '{"success":false,"status_code":34,"status_message":"The resource you
         requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:53 GMT
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
@@ -81,37 +75,31 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
+      - Mon, 24 Oct 2022 17:57:26 GMT
       Server:
       - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
       X-Cascade:
       - pass
       Vary:
-      - Accept-Encoding
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 e80693c02cfdfd081110512210d57840.cloudfront.net (CloudFront)
+      - 1.1 94bd5e4f47540501369a53d4ae35d3b2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - SEA73-P1
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - h-vZqEK88szLTPm0rnnrNMSQw2Gbh2caoEwTsOyfGjYl3xvYY_f0sA==
+      - XIXCuE3Kh2l1vGY1tGKOf2c-R193PDb8wrH22a76Ngx-DIcXb5AfCw==
       Age:
       - '1'
     body:
       encoding: ASCII-8BIT
       string: '{"success":false,"status_code":34,"status_message":"The resource you
         requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:53 GMT
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
@@ -137,37 +125,31 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
+      - Mon, 24 Oct 2022 17:57:26 GMT
       Server:
       - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
       X-Cascade:
       - pass
       Vary:
-      - Accept-Encoding
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 09331f0822fc98eebaf04130a83dbd44.cloudfront.net (CloudFront)
+      - 1.1 4b2d2d4c49521bf403522140b78283a0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - SEA73-P1
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - UXyXV1c4RnEmESLKO5UqHWhSpZfJ5dGFlkCyTKJaXjzhVOSRWL6X8A==
+      - MhA3rk_gFi1U72QzMK_1QY6pk48eIVJ3cbkbpaPecLHk2frl6XCfPQ==
       Age:
       - '1'
     body:
       encoding: ASCII-8BIT
       string: '{"success":false,"status_code":34,"status_message":"The resource you
         requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:53 GMT
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
@@ -193,35 +175,29 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
+      - Mon, 24 Oct 2022 17:57:26 GMT
       Server:
       - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
       X-Cascade:
       - pass
       Vary:
-      - Accept-Encoding
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 35575576af8067e30cfb17c6b9fde8e2.cloudfront.net (CloudFront)
+      - 1.1 6c02603f677dd5669f8ab3b41062340e.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - SEA73-P1
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - 2nT1_s2mKB-X6Jz0sU7iQHfTCGzzttZpNUYA51YyZkOFP14hywYunw==
+      - OFIL-pp3m7nSy1OyvfUysIxA8nxDK8IU5AY5FRr9ZJl2CKwgpI9qmw==
       Age:
       - '1'
     body:
       encoding: ASCII-8BIT
       string: '{"success":false,"status_code":34,"status_message":"The resource you
         requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:53 GMT
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
 recorded_with: VCR 6.1.0

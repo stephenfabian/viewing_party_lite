@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     @invitees = @user.viewing_parties.flat_map { |party| party.invitees(@user.id) }
   end
 
-  def new; end
+  def new
+  end
 
   def create
     user = User.new(user_params)
@@ -20,9 +21,30 @@ class UsersController < ApplicationController
     end
   end
 
+  def login_form
+  
+  end
+
+  def login_user
+
+    user = User.find_by(email: params[:email]) 
+    if !user
+      flash[:error] = "Sorry, your credentials are bad."
+      render :login_form
+    # end
+    else
+     user.authenticate(params[:password])
+       session[:user_id] = user.id
+       flash[:success] = "Welcome, #{user.name}!"
+       redirect_to user_path(user)
+    #  else
+      # flash[:error] = "Sorry, your credentials are bad."
+      # render :login_form
+    end
+  end
   private
 
   def user_params
-    params.permit(:name, :email)
+    params.permit(:name, :email, :password, :password_confirmation)
   end
 end

@@ -22,6 +22,8 @@ RSpec.describe 'User Registration page' do
 
       fill_in 'name', with: 'James Dean'
       fill_in 'email', with: 'jimmydean1979@goodinternet.net'
+      fill_in 'password', with: 'Tommy123'
+      fill_in 'password_confirmation', with: 'Tommy123'
 
       click_on 'Save'
 
@@ -34,18 +36,53 @@ RSpec.describe 'User Registration page' do
 
       fill_in 'name', with: 'James Dean'
       fill_in 'email', with: 'jimmydean1979@goodinternet.net'
+      fill_in 'password', with: 'Tommy123'
+      fill_in 'password_confirmation', with: 'Tommy123'
 
       click_on 'Save'
 
       expect(page).to have_content('User Registered Successfully')
     end
 
-    it 'has sad path' do
+    it 'User Story #2 - Registration (w/ Authentication) Sad Path' do
       visit register_path
 
       click_on 'Save'
 
-      expect(page).to have_content("Name can't be blank and Email can't be blank")
+      expect(page).to have_content("Name can't be blank, Email can't be blank, Password digest can't be blank, and Password can't be blank")
+    end
+
+    describe 'User Story #3 - Logging In Happy Path' do
+     it 'When I visit the landing page `/`, I see a link for "Log In' do
+      visit landing_page_path
+
+      click_link "Log In"
+      expect(current_path).to eq(login_path)
+
+      fill_in 'email', with: @user_1.email
+      fill_in "password", with: @user_1.password
+      click_button "Log In"
+
+      expect(current_path).to eq(user_path(@user_1))
+     end
+    end
+
+    describe 'User Story #4 - Logging in Sad Path' do
+      it 'if logging in and I fail to fill_in correct credentials,
+       taken back to login page and see flash message telling me I entered incorrect creds' do
+
+        visit landing_page_path
+
+        click_link "Log In" 
+
+        fill_in 'email', with: "yo"
+        fill_in "password", with: "yo"
+        click_button "Log In"
+
+        expect(current_path).to eq(login_path)
+        save_and_open_page
+        expect(page).to have_content("Sorry, your credentials are bad.")
+       end
     end
   end
 end

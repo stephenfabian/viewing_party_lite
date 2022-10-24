@@ -25,197 +25,179 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
+      - Mon, 24 Oct 2022 17:57:26 GMT
       Server:
       - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
       X-Cascade:
       - pass
       Vary:
-      - Accept-Encoding
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 ead78c395f4bede3ec6cd7ea180e3d3a.cloudfront.net (CloudFront)
+      - 1.1 dcee1124728af441beff75c95d9d9d74.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - SEA73-P1
+      - DEN50-C2
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - fkQ3Nnqm4HoQLFe-oHDsMFuPFoy8XY9AmZcFMg03xe1nUC4jHi9MUg==
-    body:
-      encoding: ASCII-8BIT
-      string: '{"success":false,"status_code":34,"status_message":"The resource you
-        requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:52 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.6.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      X-Cascade:
-      - pass
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 1481cc55c02c3a782ad420b6bac2cb32.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - SEA73-P1
-      Alt-Svc:
-      - h3=":443"; ma=86400
-      X-Amz-Cf-Id:
-      - vGV1mjoJtFP7I17SrraMkkMzFu4oUZhfAk93fw_cd8oVz4NY5GV1fA==
-    body:
-      encoding: ASCII-8BIT
-      string: '{"success":false,"status_code":34,"status_message":"The resource you
-        requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:52 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.6.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      X-Cascade:
-      - pass
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 2324edbcb8fc72f617442c65f36a40fc.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - SEA73-P1
-      Alt-Svc:
-      - h3=":443"; ma=86400
-      X-Amz-Cf-Id:
-      - VA2C9ZRM6Vhd-aVxn6K3BK7x9Rj4Tk1NmzoIA3QWL9hayVRYprzqJQ==
-    body:
-      encoding: ASCII-8BIT
-      string: '{"success":false,"status_code":34,"status_message":"The resource you
-        requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:52 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.6.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Fri, 14 Oct 2022 21:49:52 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      X-Cascade:
-      - pass
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 31119c39c5a6dc62dfa1fe940afd7be2.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - SEA73-P1
-      Alt-Svc:
-      - h3=":443"; ma=86400
-      X-Amz-Cf-Id:
-      - UMPLl0FXhzXThuLaYlmKs4mC60aBxR9rv2PJ0xlOgkFdoLnq-g6OAA==
+      - 9XPn8aUMnEV_2tg3A5PXVKd1LigRERqEEBXQLXxZAsklydwJ4FV6DQ==
       Age:
       - '1'
     body:
       encoding: ASCII-8BIT
       string: '{"success":false,"status_code":34,"status_message":"The resource you
         requested could not be found."}'
-  recorded_at: Fri, 14 Oct 2022 21:49:52 GMT
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Oct 2022 17:57:26 GMT
+      Server:
+      - openresty
+      X-Cascade:
+      - pass
+      Vary:
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 4b2d2d4c49521bf403522140b78283a0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - 21KTKumeEYY8tTEKgz7l5EEP16vqsaj6J-iO0SJlbrXwkS4yIYPm9Q==
+      Age:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"status_code":34,"status_message":"The resource you
+        requested could not be found."}'
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Oct 2022 17:57:26 GMT
+      Server:
+      - openresty
+      X-Cascade:
+      - pass
+      Vary:
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 f0b290c4e2273a7586bc6f080031d9bc.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - VWZmgpXjfUDa7FHrGJlFF0ypmhQmVfO5n2KKIFTFuStn9LEn3BX7ow==
+      Age:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"status_code":34,"status_message":"The resource you
+        requested could not be found."}'
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/?api_key=<moviebd_api_key>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 24 Oct 2022 17:57:26 GMT
+      Server:
+      - openresty
+      X-Cascade:
+      - pass
+      Vary:
+      - Accept-Encoding,Accept-Encoding,Accept-Encoding
+      - Origin
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 28d79637e27f11e3ab19a9515e273a5a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - IcUZ4kybOO7fai0rsmR7pgg7xtG8l_KSJ-bgl8xDb_yx6vpJ68rCJg==
+      Age:
+      - '1'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"success":false,"status_code":34,"status_message":"The resource you
+        requested could not be found."}'
+  recorded_at: Mon, 24 Oct 2022 17:57:27 GMT
 recorded_with: VCR 6.1.0
