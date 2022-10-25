@@ -2,9 +2,14 @@
 
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @movies = @user.viewing_parties.map { |party| MovieFacade.details_poro(party.movie_id) }
-    @invitees = @user.viewing_parties.flat_map { |party| party.invitees(@user.id) }
+    if !user_id_in_session
+      redirect_to landing_page_path
+      flash.notice = "You must be logged in or registered to access your dashboard"
+    else
+      @user = User.find(user_id_in_session)
+      @movies = @user.viewing_parties.map { |party| MovieFacade.details_poro(party.movie_id) }
+      @invitees = @user.viewing_parties.flat_map { |party| party.invitees(@user.id) }
+    end
   end
 
   def new
@@ -13,7 +18,8 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
-      redirect_to(user_path(user))
+      session[:user_id] = user.id
+      redirect_to(dashboard_path)
       flash.notice = 'User Registered Successfully'
     else
       flash.alert = user.errors.full_messages.to_sentence
@@ -25,21 +31,23 @@ class UsersController < ApplicationController
   
   end
 
-  def login_user
+  def logout
+    # require 'pry'; binding.pry
+    session.delete :user_id
+    redirect_to landing_page_path
+  end
 
+  def login_user
+# if passwrod is incorrect, do something
     user = User.find_by(email: params[:email]) 
     if !user
       flash[:error] = "Sorry, your credentials are bad."
       render :login_form
-    # end
     else
      user.authenticate(params[:password])
        session[:user_id] = user.id
        flash[:success] = "Welcome, #{user.name}!"
-       redirect_to user_path(user)
-    #  else
-      # flash[:error] = "Sorry, your credentials are bad."
-      # render :login_form
+       redirect_to dashboard_path
     end
   end
   private

@@ -1,10 +1,15 @@
 <h2>Landing Page</h2>
- <p><%= link_to "Log In", login_path, local: true, method: :get %></p>
 
-<%= button_to "Create New User", register_path, local: true, method: :get%>
+<% if !session[:user_id] %>
+  <p><%= link_to "Log In", login_path, local: true, method: :get %></p>
 
-<h3>Current Users</h3>
+  <%= button_to "Create New User", register_path, local: true, method: :get%>
 
-<% @users.each do |user| %>
-  <p><%= link_to "#{user.name}", user_path(user), local: true, method: :get %></p>
+  <% else %>
+  <h3>Current Users</h3>
+
+  <% @users.each do |user| %>
+    <p><%= user.email %></p>
+  <% end %>
+ <p><%= link_to "Log Out", '/logout', local: true, method: :patch %></p>
 <% end %>

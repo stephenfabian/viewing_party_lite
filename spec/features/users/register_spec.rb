@@ -28,7 +28,9 @@ RSpec.describe 'User Registration page' do
       click_on 'Save'
 
       user = User.last
-      expect(current_path).to eq(user_path(user))
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(User.last.id)
+
+      expect(current_path).to eq(dashboard_path)
     end
 
     it 'has happy path' do
@@ -63,7 +65,7 @@ RSpec.describe 'User Registration page' do
       fill_in "password", with: @user_1.password
       click_button "Log In"
 
-      expect(current_path).to eq(user_path(@user_1))
+      expect(current_path).to eq(dashboard_path)
      end
     end
 
@@ -78,9 +80,8 @@ RSpec.describe 'User Registration page' do
         fill_in 'email', with: "yo"
         fill_in "password", with: "yo"
         click_button "Log In"
-
         expect(current_path).to eq(login_path)
-        save_and_open_page
+    
         expect(page).to have_content("Sorry, your credentials are bad.")
        end
     end
