@@ -3,9 +3,13 @@
 class ViewingPartiesController < ApplicationController
   
   def new
-    @user = User.find(params[:user_id])
-    @users = User.all.where.not(name: @user.name)
-    @movie = MovieFacade.details_poro(params[:movie_id])
+    if !params[:user_id]
+      flash.notice = "You must be logged in or registered to create a viewing party"
+    else
+      @user = User.find(params[:user_id])
+      @users = User.all.where.not(name: @user.name)
+      @movie = MovieFacade.details_poro(params[:movie_id])
+    end
   end
 
   def create
@@ -18,6 +22,7 @@ class ViewingPartiesController < ApplicationController
       flash[:notice] = "Party duration must be greater than movie runtime and all fields must be filled in "
       render :new
     elsif party.save
+      session[:user_id] = @user.id
       invited_users = []
       params[:user].select do |user_id|
         if user_id != "0"
@@ -28,7 +33,7 @@ class ViewingPartiesController < ApplicationController
       invited_users.each do |user|
         ViewingPartyUser.create(viewing_party_id: party.id, user_id: user)
       end
-      redirect_to user_path(@user)
+      redirect_to dashboard_path
     else
       flash.alert = party.errors.full_messages.to_sentence
       render :new

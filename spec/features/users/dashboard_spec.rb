@@ -16,33 +16,43 @@ RSpec.describe 'User Dashboard Page' do
 
       create(:viewing_party_users, user: @user_2, viewing_party: @viewing_party1)
       create(:viewing_party_users, user: @user_2, viewing_party: @viewing_party2)
+
     end
 
     it 'I should see <users name>s Dashboard at the top of the page' do
-      visit user_path(@user_1)
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(@user_1.id)
+      visit dashboard_path
       expect(page).to have_content("#{@user_1.name}'s Dashboard")
       expect(page).to_not have_content("#{@user_2.name}'s Dashboard")
+      
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(@user_2.id)
 
-      visit user_path(@user_2)
+      visit dashboard_path
       expect(page).to have_content("#{@user_2.name}'s Dashboard")
       expect(page).to_not have_content("#{@user_1.name}'s Dashboard")
     end
 
     it 'I see A button to Discover Movies' do
-      visit user_path(@user_1)
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(@user_1.id)
+
+      visit dashboard_path
       click_button 'Discover Movies'
       expect(current_path).to eq(user_discover_path(@user_1))
 
-      visit user_path(@user_2)
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(@user_2.id)
+      visit dashboard_path
       click_button 'Discover Movies'
       expect(current_path).to eq(user_discover_path(@user_2))
     end
 
     it 'A section that lists viewing parties' do
-      visit user_path(@user_1)
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(@user_1.id)
+
+      visit dashboard_path
       expect(page).to have_content('Viewing Parties')
 
-      visit user_path(@user_2)
+      allow_any_instance_of(ApplicationController).to receive(:user_id_in_session).and_return(@user_2.id)
+      visit dashboard_path
       expect(page).to have_content('Viewing Parties')
     end
   end
@@ -66,7 +76,7 @@ RSpec.describe 'User Dashboard Page' do
       check "user_#{@user_2.id}" 
       check "user_#{@user_3.id}"
       click_button("Create Party")
-      expect(current_path).to eq(user_path(@user_1))
+      expect(current_path).to eq(dashboard_path)
 
       within "#viewing-parties" do
         expect(page).to have_content(@movie1.title)
@@ -83,7 +93,7 @@ RSpec.describe 'User Dashboard Page' do
       check "user_#{@user_3.id}"
       click_button("Create Party")
 
-      visit user_path(@user_2)
+      visit dashboard_path
 
       within "#viewing-parties" do
         expect(page).to have_content(@movie1.title)

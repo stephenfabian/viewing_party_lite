@@ -19,7 +19,8 @@ class MoviesController < ApplicationController
 
   # Stephen edit
   def show
-    @user = User.find(params[:user_id])
+    # @user = User.find(params[:user_id])
+    @user = User.find(session[:user_id])
     @movie = MovieFacade.details_poro(params[:id])
     @movie_cast = MovieFacade.credits_poro(params[:id])
     @movie_reviews = MovieFacade.reviews_poro(params[:id])

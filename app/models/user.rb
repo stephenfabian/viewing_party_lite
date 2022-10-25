@@ -2,11 +2,11 @@
 require 'bcrypt'
 
 class User < ApplicationRecord
-  include BCrypt
 
   validates :name, uniqueness: true, presence: true 
   validates :email, uniqueness: true, presence: true 
   validates_presence_of :password_digest
+  # validates_presence_of :password  
 
   has_secure_password
 
